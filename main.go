@@ -219,7 +219,7 @@ func main() {
 
 	os.Mkdir(config.DownloadFolder, 0755)
 
-	client, err := qobuz.NewFromAuthToken("")
+	client, err := qobuz.NewFromCredentials(config.Email, config.Password)
 	if err != nil {
 		fmt.Println("Failed to create Qobuz client:", err)
 		return
